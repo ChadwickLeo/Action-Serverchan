@@ -10,10 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: Get date
-      run: echo "::set-env name=REPORT_DATE::$(TZ=':Asia/Shanghai' date '+%Y-%m-%d %T')"
     - uses: ./
       with:
         sendkey: ${{ secrets.SCKEY }}
-        text: ${{ env.REPORT_DATE }}
+        text: testok
         desp: ok
