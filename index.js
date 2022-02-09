@@ -54,6 +54,9 @@ async function run() {
             desp: core.getInput('desp'),
             channel: core.getInput('channel')
         });
+        if(!postData.channel){
+            delete postData.channel;
+        }
 
         const sendkey = core.getInput('sendkey', {required: true});
         return Post(postData, `https://sctapi.ftqq.com/${sendkey}.send`, {

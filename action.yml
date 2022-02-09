@@ -1,8 +1,8 @@
 name: 'Server-Chan' 
 description: 'send to server-chan'
 inputs:
-  SCKEY:  # id of input
-    description: 'private SCKEY'
+  sendkey:  # id of input
+    description: 'private sendkey'
     required: true
   text: # title
     description: 'title'
@@ -11,6 +11,10 @@ inputs:
     description: 'description'
     required: false
     default: ''
+  channel: #desp
+    description: 'description'
+    required: false
+    default: false
 
 runs:
   using: 'node12'
