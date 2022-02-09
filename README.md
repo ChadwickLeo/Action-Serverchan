@@ -2,8 +2,13 @@
 
 Send things to Server-chan using javascript.
 
-##
-v4开始支持Server酱turbo版.如使用老版Serverchan请使用v3之前版本.
+## 为什么用这个Action？
+
+这个 Action 使用的是 Github Actions 里自带的 Node.js 运行时，相比 Docker 类型运行时启动更快,可以节约您宝贵的 Action 运行时间。
+
+## 该使用哪个版本？
+
+v4开始支持Server酱turbo版.如使用老版Serverchan请使用v3之前版本。查看git tag来切换不同版本的文档.
 
 ## 输入
 
