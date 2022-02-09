@@ -2,8 +2,7 @@ name: "units-test"
 on:
   push:
     branches:
-      - master
-      - 'releases/*'
+      - '*'
 
 jobs:
   # test action works running from the graph  
