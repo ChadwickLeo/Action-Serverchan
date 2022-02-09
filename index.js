@@ -49,14 +49,15 @@ function Post(data, host, headers) {
 
 async function run() {
     try {
-        const postData = querystring.stringify({
+        const data = {
             text: core.getInput('text', {required: true}),
             desp: core.getInput('desp'),
             channel: core.getInput('channel')
-        });
-        if(!postData.channel){
-            delete postData.channel;
+        };
+        if(!data.channel){
+            delete data.channel;
         }
+        const postData = querystring.stringify(data);
 
         const sendkey = core.getInput('sendkey', {required: true});
         return Post(postData, `https://sctapi.ftqq.com/${sendkey}.send`, {
