@@ -2,9 +2,12 @@
 
 Send things to Server-chan using javascript.
 
+##
+v4开始支持Server酱turbo版.如使用老版Serverchan请使用v3之前版本.
+
 ## 输入
 
-### `SCKEY`:
+### `sendkey`:
 **必要** 用于推送消息的SCKEY，最佳实践是将这个值放置在仓库设置中的secrets变量里。
 
 ### `text`: 
@@ -14,6 +17,9 @@ Send things to Server-chan using javascript.
 ### `desp`: 
 
  **可选** 正文
+
+### `channel`:
+ **可选** 动态指定推送频道,参阅https://sct.ftqq.com/sendkey
 
 ## 示例
 ```
@@ -36,10 +42,12 @@ jobs:
       uses: emon100/Action-Serverchan@v2
       if: steps.dataWork.outputs.changed == 'true'
       with:
-        # Secret key
-        SCKEY: ${{ secrets.SCKEY }} 
+        # sendkey
+        sendkey: ${{ secrets.sendkey }} 
         # Message title
         text: ${{ env.REPORT_DATE }}
         # Message content
         desp: ok
+        # channel
+        chanel: '9|16'
 ```
