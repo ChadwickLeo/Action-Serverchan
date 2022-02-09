@@ -14,6 +14,6 @@ jobs:
       run: echo "::set-env name=REPORT_DATE::$(TZ=':Asia/Shanghai' date '+%Y-%m-%d %T')"
     - uses: ./
       with:
-        SCKEY: ${{ secrets.SCKEY }}
+        sendkey: ${{ secrets.SCKEY }}
         text: ${{ env.REPORT_DATE }}
         desp: ok
